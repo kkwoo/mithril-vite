@@ -1,0 +1,3 @@
+language="nodejs"
+run="yarn build ;yarn serve" # when ready
+# run="yarn dev" # while building
