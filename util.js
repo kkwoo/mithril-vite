@@ -16,9 +16,4 @@ function customTime() {
   return (curTime);
 }
 
-function sendState2URL() {
-  m.route.set('/splash/:entryDate/:beginTime/:endTime/:habit',
-              state);
-}
-
-export {customDate, customTime, sendState2URL};
+export {customDate, customTime};

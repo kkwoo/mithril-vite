@@ -1,3 +1,23 @@
+// if you wrap m in curly braces, the code fails silently
+// import m from 'mithril/mithril.min.js'; // this also works
+// from https://mithril.js.org/installation.html
+import m from 'mithril';
+// require doesn't work either
+// var m = require("mithril");
+import {customDate, customTime} from './util.js';
+
+var state = {
+  entryDate: "",
+  beginTime: "",
+  endTime: "",
+  habit: ""
+};
+
+function sendState2URL() {
+  m.route.set('/splash/:entryDate/:beginTime/:endTime/:habit',
+              state);
+}
+
 function mountMithril() {
   var count = 0;
   var root = document.getElementById('mithrilSpace');
