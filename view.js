@@ -5,6 +5,7 @@ import m from 'mithril';
 // require doesn't work either
 // var m = require("mithril");
 import {customDate, customTime} from './util.js';
+import {reqWRetry} from './gapiHelpers.js';
 
 var state = {
   entryDate: "",
@@ -103,6 +104,7 @@ function mountMithril() {
            m("option", {value: "600mL water"}, "600mL water"),
            m("option", {value: "3 x 8pu,11sq"}, "3 x 8pu,11sq"),
          ]),
+        m("button", {onclick: function() {reqWRetry();}}, "Log Habit"),
         m("section", {}, `state: ${JSON.stringify(state)}`),
       ]);
     }
