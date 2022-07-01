@@ -46,7 +46,7 @@ function mountMithril() {
         }),
         m("label", { for: "beginTime" }, "Begin Time"),
         m("input", {
-          type: "time",
+          type: "time",  
           id: "beginTime",
           name: "beginTime",
           value: vnode.attrs.beginTime.replaceAll("^", ":"),
