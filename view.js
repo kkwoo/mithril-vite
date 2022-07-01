@@ -113,4 +113,4 @@ function mountMithril() {
   });
 }
 
-export {mountMithril};
+export {mountMithril, state};
